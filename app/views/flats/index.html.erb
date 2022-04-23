@@ -1,0 +1,15 @@
+<h1>Flats</h1>
+
+<div class="container p-2 justify-content-between">
+  <% @flats.each do |f|  %>
+  <div class="card row-3" style="width: 18rem;">
+    <img src=<% f.picture_url %> class="card-img-top" alt="...">
+    <div class="card-body p-2">
+      <h5 class="card-title"><%= f.name %> -💲<%= f.price_per_night %> / 🧑‍🤝‍🧑 <%= f.number_of_guests %></h5>
+      <h6><%= f.address %></h6>
+      <p class="card-text"><%= f.description %></p>
+      <a href="#" class="btn btn-primary"><%= link_to 'More info', flat_path(f) %></a>
+    </div>
+  </div>
+  <% end %>
+</div>

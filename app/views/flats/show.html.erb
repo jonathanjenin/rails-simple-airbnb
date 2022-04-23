@@ -1,0 +1,9 @@
+<h1><%= @flat.name %></h1>
+
+<p>💲<%= @flat.price_per_night %> / 🧑‍🤝‍🧑 <%= @flat.number_of_guests %></p>
+<p>Address: <%= @flat.address %> <br>
+<p> <%= @flat.description %></p>
+
+<%= link_to '📝', edit_flat_path %>
+<%= link_to '🗑️', flat_path(@flat), method: :delete, data: {confirm: 'Are you sure?'} %>
+<%= link_to '🔙', flats_path %>
